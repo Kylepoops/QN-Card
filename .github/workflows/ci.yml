@@ -16,7 +16,7 @@ jobs:
 
     - name: clone latest QNotified
       run: 
-        git clone -b master https://github.com/ferredoxin/QNotified.git
+        git clone -b master https://github.com/ferredoxin/QNotified.git ./
 
     - name: ls
       run: 
@@ -24,8 +24,7 @@ jobs:
 
     - name: mv
       run: 
-        mv -f ./CardMsgList.kt QNotified/app/src/main/java/me/singleneuron/base/bridge/CardMsgList.kt &&
-        cd QNotified
+        mv -f ./CardMsgList.kt app/src/main/java/me/singleneuron/base/bridge/CardMsgList.kt
         
     - name: Prepare Java 11
       uses: actions/setup-java@v1
@@ -36,7 +35,7 @@ jobs:
     - name: Cache Gradle packages
       uses: actions/cache@v2
       with:
-        path: QNotified/.gradle/caches
+        path: .gradle/caches
         key: ${{ runner.os }}-gradle-${{ hashFiles('**/*.gradle') }}
         restore-keys: ${{ runner.os }}-gradle
 
