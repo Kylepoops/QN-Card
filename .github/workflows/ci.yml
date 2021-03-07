@@ -36,7 +36,7 @@ jobs:
     - name: Cache Gradle packages
       uses: actions/cache@v2
       with:
-        path: ~/QNotified/.gradle/caches
+        path: QNotified/.gradle/caches
         key: ${{ runner.os }}-gradle-${{ hashFiles('**/*.gradle') }}
         restore-keys: ${{ runner.os }}-gradle
 
@@ -50,5 +50,5 @@ jobs:
       uses: actions/upload-artifact@v2
       if: ${{ !github.head_ref }}
       with:
-        path: ~/QNotified/app/build/outputs/apk
+        path: QNotified/app/build/outputs/apk
         name: QN-Card
