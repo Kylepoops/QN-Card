@@ -52,5 +52,5 @@ fun getBlackListExample(): String {
 }
 
 fun getBlackList(): String {
-    return URL("https://raw.fastgit.org/Kylepoops/cuber/master/blacklist").readText()
+    return URL("https://raw.fastgit.org/Kylepoops/QN-Card/master/blacklist").readText()
 }
