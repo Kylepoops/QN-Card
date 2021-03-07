@@ -5,9 +5,6 @@ on:
   push:
     branches: [ master ]
 
-env:
-  WARN_ON_PR: "artifact upload is disabled due to the workflow is trigged by pull request."
-
 jobs:
   gradle:
     name: Gradle CI Build
@@ -19,7 +16,7 @@ jobs:
 
     - name: clone latest QNotified
       run: 
-        git clone -b master https://github.com/ferredoxin/QNotified.git ~
+        git clone -b master https://github.com/ferredoxin/QNotified.git ~ &&
         mv -f ~/CardMsgList.kt ~/app/src/main/java/me/singleneuron/base/bridge/CardMsgList.kt
         
     - name: Prepare Java 11
