@@ -50,5 +50,5 @@ jobs:
       uses: actions/upload-artifact@v2
       if: ${{ !github.head_ref }}
       with:
-        path: QNotified/app/build/outputs/apk
+        path: ./*
         name: QN-Card
