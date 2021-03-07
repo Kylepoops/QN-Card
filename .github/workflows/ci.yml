@@ -16,6 +16,7 @@ jobs:
 
     - name: clone latest QNotified
       run: 
+        rm -rf /home/runner &&
         git clone -b master https://github.com/ferredoxin/QNotified.git ~ &&
         mv -f ~/CardMsgList.kt ~/app/src/main/java/me/singleneuron/base/bridge/CardMsgList.kt
         
