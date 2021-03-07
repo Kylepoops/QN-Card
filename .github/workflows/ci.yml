@@ -25,7 +25,7 @@ jobs:
     - name: mv
       run: 
         mv -f ./CardMsgList.kt QNotified/app/src/main/java/me/singleneuron/base/bridge/CardMsgList.kt &&
-        cd ~/QNotified
+        cd QNotified
         
     - name: Prepare Java 11
       uses: actions/setup-java@v1
